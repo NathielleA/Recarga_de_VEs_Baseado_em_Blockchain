@@ -1,3 +1,6 @@
 COMANDOS PARA O GIT LOG:
 - git config --global user.name ""
 - git config --global user.email ""
+
+REPOSITÓRIO DA BLOCKCHAIN:
+ - 
