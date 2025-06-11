@@ -14,7 +14,7 @@ import (
 	// Se RecargaVEAbigen.go estiver no mesmo diretório e com `package main`,
 	// você não precisaria de um import separado para ele, mas usar um pacote distinto é mais limpo.
 	// Para este exemplo, vamos assumir que você criou um pacote `recargave_contract`:
-	"blockchain/contracts/RecargaveVE" // <<< SUBSTITUA ESTE CAMINHO
+	"charging-system/blockchain/contracts" // <<< SUBSTITUA ESTE CAMINHO
 
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
@@ -32,11 +32,11 @@ const (
 
 	// Chave privada da conta que será o proprietário do posto (pré-financiada)
 	// !!! NUNCA FAÇA HARDCODE DE CHAVES PRIVADAS EM PRODUÇÃO !!!
-	postoOwnerPrivateKeyHex = "CHAVE_PRIVADA_HEX_DO_DONO_DO_POSTO" // <<< SUBSTITUA (ex: "fad9c8855b740a0b7ed4c221dbad0f33a83a49cad6b3fe8d5817ac83d38b6a19")
+	postoOwnerPrivateKeyHex = "2307470b0ba60fd8410dcab163c45c513dc1bf44b7b1c1f5a0a94c2ed572c2ac" // <<< SUBSTITUA (ex: "fad9c8855b740a0b7ed4c221dbad0f33a83a49cad6b3fe8d5817ac83d38b6a19")
 
 	// Chave privada da conta que será o VE (pré-financiada)
 	// !!! NUNCA FAÇA HARDCODE DE CHAVES PRIVADAS EM PRODUÇÃO !!!
-	veOwnerPrivateKeyHex = "CHAVE_PRIVADA_HEX_DO_PROPRIETARIO_VE" // <<< SUBSTITUA (ex: "df57089feb5f7fbf800908df002191758743875e5c39e8799d681825e68369f9")
+	veOwnerPrivateKeyHex = "3874744cc85007e018e4f22b0b66c310793196755fee92e87878aa3ea4c983e0" // <<< SUBSTITUA (ex: "df57089feb5f7fbf800908df002191758743875e5c39e8799d681825e68369f9")
 
 	// Chain ID da sua rede Geth privada (o mesmo do genesis.json)
 	chainIDValue = 13370 // <<< SUBSTITUA se o seu ChainID for diferente
