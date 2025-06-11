@@ -2,11 +2,8 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"math/rand"
-	"net/http"
 	"time"
-	
 )
 
 var clientID int
@@ -34,5 +31,11 @@ func main() {
 	rand.Seed(time.Now().UnixNano())
 
 	clientID = rand.Intn(1000)
+
+	fmt.Printf("Carro ID: %d\n", clientID)
+
+	// Iniciando o loop do carro
+	startCarLoop()
+
 	//id := fmt.Sprintf("%d", clientID)
 }
