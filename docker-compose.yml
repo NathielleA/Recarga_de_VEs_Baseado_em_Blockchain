@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  geth_node:
+    image: ethereum/client-go:v1.13.15
+    ports:
+      - "8545:8545"
+      - "8546:8546"
+      - "30303:30303"
+    volumes:
+      - ./geth_config:/root/geth_config
+      - ./geth_data:/root/.ethereum/node_data
+    entrypoint: /bin/sh
+    command: -c /root/geth_config/scripts/start_geth.sh
