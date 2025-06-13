@@ -1,0 +1,48 @@
+version: "3.8"
+
+services:
+
+  ethereum-node:
+    build:
+      context: ./blockchain
+    container_name: ethereum-node
+    command: >
+      --dev
+      --http
+      --http.addr=0.0.0.0
+      --http.port=8545
+      --http.api=eth,net,web3,personal
+      --allow-insecure-unlock
+    ports:
+      - "8545:8545"
+    networks:
+      - ve-net
+
+  backend:
+    build: ./backend
+    container_name: ve-backend
+    environment:
+      - ETH_RPC_URL=http://ethereum-node:8545
+      - PRIVATE_KEY=SUA_CHAVE_HEX
+    depends_on:
+      - ethereum-node
+    ports:
+      - "8080:8080"
+    networks:
+      - ve-net
+
+  frontend:
+    image: nginx:alpine
+    container_name: ve-frontend
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+    ports:
+      - "8081:80"
+    depends_on:
+      - backend
+    networks:
+      - ve-net
+
+networks:
+  ve-net:
+    driver: bridge
