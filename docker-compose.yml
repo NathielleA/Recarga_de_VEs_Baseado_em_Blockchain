@@ -23,7 +23,7 @@ services:
     container_name: ve-backend
     environment:
       - ETH_RPC_URL=http://ethereum-node:8545
-      - PRIVATE_KEY=SUA_CHAVE_HEX
+      - PRIVATE_KEY=0x0d5a52a34851f2465deffb8e1170ef54ef8c2a9c55e4a18d09dbd23a8b5fd8ff
     depends_on:
       - ethereum-node
     ports:
