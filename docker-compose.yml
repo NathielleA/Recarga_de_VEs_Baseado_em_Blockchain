@@ -31,18 +31,6 @@ services:
     networks:
       - ve-net
 
-  frontend:
-    image: nginx:alpine
-    container_name: ve-frontend
-    volumes:
-      - ./frontend:/usr/share/nginx/html
-    ports:
-      - "8081:80"
-    depends_on:
-      - backend
-    networks:
-      - ve-net
-
 networks:
   ve-net:
     driver: bridge

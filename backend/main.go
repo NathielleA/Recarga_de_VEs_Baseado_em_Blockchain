@@ -1,23 +1,61 @@
 package main
 
 import (
-    "context"
-    "fmt"
-    "log"
-	
-    "github.com/ethereum/go-ethereum/ethclient"
+	"fmt"
+	"log"
+	"math/big"
+	"os"
+	"time"
+
+	"github.com/ethereum/go-ethereum/accounts/abi/bind"
+	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/ethereum/go-ethereum/ethclient"
+
+	"ve-backend/contract" // caminho do binding gerado (ajustado ao go.mod)
 )
 
 func main() {
-    client, err := ethclient.Dial("http://localhost:8545")
-    if err != nil {
-        log.Fatal(err)
-    }
+	// Espera o nó Ethereum iniciar (tentativas com intervalo)
+	var client *ethclient.Client
+	var err error
+	for i := 0; i < 10; i++ {
+		client, err = ethclient.Dial("http://ethereum-node:8545")
+		if err == nil {
+			break
+		}
+		log.Println("Tentando conectar ao nó Ethereum...")
+		time.Sleep(3 * time.Second)
+	}
+	if err != nil {
+		log.Fatalf("Erro ao conectar com Ethereum: %v", err)
+	}
 
-    blockNumber, err := client.BlockNumber(context.Background())
-    if err != nil {
-        log.Fatal(err)
-    }
+	// Carrega a chave privada via variável de ambiente
+	privKeyHex := os.Getenv("PRIVATE_KEY")
+	if privKeyHex == "" {
+		log.Fatal("PRIVATE_KEY não definida no ambiente")
+	}
 
-    fmt.Printf("Bloco atual: %d\n", blockNumber)
+	privateKey, err := crypto.HexToECDSA(privKeyHex)
+	if err != nil {
+		log.Fatalf("Erro ao carregar chave privada: %v", err)
+	}
+
+	// Cria transação autenticada com o ID da rede local (ex: 2025 ou 1337)
+	chainID := big.NewInt(1337) // use 1337 se estiver no modo --dev
+	auth, err := bind.NewKeyedTransactorWithChainID(privateKey, chainID)
+	if err != nil {
+		log.Fatalf("Erro ao criar transactor: %v", err)
+	}
+
+	// Faz deploy do contrato
+	address, tx, instance, err := contract.DeployEVCharging(auth, client)
+	if err != nil {
+		log.Fatalf("Erro ao fazer deploy do contrato: %v", err)
+	}
+
+	fmt.Println("✅ Contrato deployado em:", address.Hex())
+	fmt.Println("🔗 Transação de deploy:", tx.Hash().Hex())
+
+	_ = instance // você pode usar essa instância para chamar métodos depois
 }
