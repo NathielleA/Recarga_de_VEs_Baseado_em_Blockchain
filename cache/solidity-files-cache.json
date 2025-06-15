@@ -1,0 +1,41 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\KauanFarias\\Documents\\PBL 3\\Recarga_de_VEs_Baseado_em_Blockchain\\contracts\\ChargingStation.sol": {
+      "lastModificationDate": 1750019492743,
+      "contentHash": "34efa5404d26f9588ccb8b7b3a5cde27",
+      "sourceName": "contracts/ChargingStation.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "ChargingStation"
+      ]
+    }
+  }
+}
