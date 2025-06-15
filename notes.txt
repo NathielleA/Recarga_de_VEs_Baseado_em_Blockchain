@@ -1,9 +1,0 @@
-COMANDOS PARA O GIT LOG:
-- git config --global user.name ""
-- git config --global user.email ""
-
-REPOSITÓRIO DA BLOCKCHAIN:
- - 
-
-FRONTEND COMANDO
-- python3 -m http.server 8080
