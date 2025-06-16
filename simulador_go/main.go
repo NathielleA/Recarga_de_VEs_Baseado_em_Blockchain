@@ -4,8 +4,6 @@ import (
 	"log"
 	"time"
 
-<<<<<<< HEAD
-=======
 	// Importe o pacote gerado pelo abigen.
 	// Substitua "NOME_DO_SEU_MODULO_GO/simulador_go/recargave_contract" pelo caminho correto
 	// onde NOME_DO_SEU_MODULO_GO é o nome do seu módulo Go (definido no go.mod).
@@ -17,8 +15,6 @@ import (
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
->>>>>>> b22cec106ccd5462efbe31c439795a75e686cbb9
-	"github.com/ethereum/go-ethereum/ethclient"
 )
 
 const (
