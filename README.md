@@ -45,6 +45,7 @@ npx hardhat node --port 8750
 Para o deploy do contrato:
 ```sh
  npx hardhat run scripts/deploy.js --network localhost```
+```
 
 ```sh
 docker build -t meu-hardhat .
