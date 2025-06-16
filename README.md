@@ -1,4 +1,5 @@
-# Sistema de Recarga de Veículos Elétricos Baseado em Blockchain
+# ⚡ Sistema de Recarga de Veículos Elétricos Baseado em Blockchain 🔗
+
 
 ## Resumo e Objetivo
 
@@ -47,7 +48,7 @@ Com a blockchain rodando, abra um novo terminal e execute o simulador:
 
 ```sh
 cd simulador_go
-go run main.go
+go run .
 ```
 
 O simulador irá conectar-se à blockchain, criar entidades (carro e posto), e executar o fluxo de reserva, recarga e pagamento, registrando todas as operações na blockchain.
