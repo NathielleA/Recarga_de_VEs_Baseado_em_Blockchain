@@ -63,4 +63,4 @@ O simulador irá conectar-se à blockchain, criar entidades (carro e posto), e e
 
 ## Considerações Finais
 
-O sistema demonstra a viabilidade de utilizar blockchain para garantir reservas sequenciais, reduzir riscos de interrupções e promover transparência no setor de mobilidade elétrica. A arquitetura modular e o uso de containers facilitam testes, desenvolvimento e futuras
+O sistema demonstra a viabilidade de utilizar blockchain para garantir reservas sequenciais, reduzir riscos de interrupções e promover transparência no setor de mobilidade elétrica. A arquitetura modular e o uso de containers facilitam testes, desenvolvimento e futuras expansões do sistema.
