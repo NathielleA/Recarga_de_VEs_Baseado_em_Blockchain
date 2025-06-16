@@ -24,21 +24,19 @@ const (
 	// Chave privada da conta do CARRO (Account #1 do seu log)
 	carPrivateKey = "59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d"
 
-<<<<<<< HEAD
 	// Chave privada da conta do DONO DO POSTO (Account #0 do seu log)
 	stationOwnerPrivateKey = "ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
-=======
-	// Chave privada da conta que será o proprietário do posto (pré-financiada)
-	// !!! NUNCA FAÇA HARDCODE DE CHAVES PRIVADAS EM PRODUÇÃO !!!
-	postoOwnerPrivateKeyHex = "2307470b0ba60fd8410dcab163c45c513dc1bf44b7b1c1f5a0a94c2ed572c2ac" // <<< SUBSTITUA (ex: "fad9c8855b740a0b7ed4c221dbad0f33a83a49cad6b3fe8d5817ac83d38b6a19")
+//=======
+	// // Chave privada da conta que será o proprietário do posto (pré-financiada)
+	// // !!! NUNCA FAÇA HARDCODE DE CHAVES PRIVADAS EM PRODUÇÃO !!!
+	// postoOwnerPrivateKeyHex = "2307470b0ba60fd8410dcab163c45c513dc1bf44b7b1c1f5a0a94c2ed572c2ac" // <<< SUBSTITUA (ex: "fad9c8855b740a0b7ed4c221dbad0f33a83a49cad6b3fe8d5817ac83d38b6a19")
 
-	// Chave privada da conta que será o VE (pré-financiada)
-	// !!! NUNCA FAÇA HARDCODE DE CHAVES PRIVADAS EM PRODUÇÃO !!!
-	veOwnerPrivateKeyHex = "3874744cc85007e018e4f22b0b66c310793196755fee92e87878aa3ea4c983e0" // <<< SUBSTITUA (ex: "df57089feb5f7fbf800908df002191758743875e5c39e8799d681825e68369f9")
+	// // Chave privada da conta que será o VE (pré-financiada)
+	// // !!! NUNCA FAÇA HARDCODE DE CHAVES PRIVADAS EM PRODUÇÃO !!!
+	// veOwnerPrivateKeyHex = "3874744cc85007e018e4f22b0b66c310793196755fee92e87878aa3ea4c983e0" // <<< SUBSTITUA (ex: "df57089feb5f7fbf800908df002191758743875e5c39e8799d681825e68369f9")
 
-	// Chain ID da sua rede Geth privada (o mesmo do genesis.json)
-	chainIDValue = 13370 // <<< SUBSTITUA se o seu ChainID for diferente
->>>>>>> b22cec106ccd5462efbe31c439795a75e686cbb9
+	// // Chain ID da sua rede Geth privada (o mesmo do genesis.json)
+	// chainIDValue = 13370 // <<< SUBSTITUA se o seu ChainID for diferente
 )
 
 func main() {
