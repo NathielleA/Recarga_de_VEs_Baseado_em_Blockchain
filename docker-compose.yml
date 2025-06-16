@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  hardhat:
+    build: .
+    # O "command" abaixo é a única adição.
+    # Ele sobrescreve o CMD do Dockerfile para garantir que o nó
+    # Hardhat seja acessível de fora do contêiner.
+    command: npx hardhat node --hostname 0.0.0.0
+    volumes:
+      - .:/app
+    ports:
+      - "8545:8545"
