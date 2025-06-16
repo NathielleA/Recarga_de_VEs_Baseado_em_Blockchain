@@ -47,13 +47,6 @@ Para o deploy do contrato:
  npx hardhat run scripts/deploy.js --network localhost
 ```
 
-```sh
-docker build -t meu-hardhat .
-docker run -it meu-hardhat
-
-npx hardhat node
-```
-
 Isso irá construir a imagem Docker e iniciar um nó Hardhat acessível em `localhost:8545`.
 
 ### 2. Executar o Simulador em Golang
