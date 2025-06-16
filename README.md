@@ -38,6 +38,7 @@ O projeto utiliza o Hardhat para simular a blockchain localmente. Para iniciar:
 
 ```sh
 npm install node
+npx hardhat node
 docker-compose up --build
 ```
 
