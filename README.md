@@ -37,6 +37,7 @@ Essas tecnologias foram escolhidas por sua robustez, comunidade ativa e alinhame
 O projeto utiliza o Hardhat para simular a blockchain localmente. Para iniciar:
 
 ```sh
+npm install node
 docker-compose up --build
 ```
 
